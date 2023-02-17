@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <nav class="sticky">
+      <div id="nabvar">
+        <img src="./src/img/logo.png" alt="" height="41px" width="193px">
+        <p>high quality experiences</p>
+        <button id="menu_button">
+          <span id="line-1"></span>
+          <span id="line-2"></span>
+        </button>
+      </div>
+      <div id="menu_container" class="hidden">
+        <menu id="menu_modal" class="menu_closed">
+          <p class="close">
+            <button id="menu_close_button">
+              &times;
+            </button>
+          </p>
+          <ul class="first">
+            <li><a class="nav_link active" href="#">home.</a></li>
+            <li><a class="nav_link" href="#info_section">portafolio</a></li>
+            <li><a class="nav_link" href="#info_section">gorila</a></li>
+            <li><a class="nav_link" href="#form_section">contáctanos</a></li>
+          </ul>
+          <ul class="second">
+            <li><a href="#">facebook</a></li>
+            <li><a href="#">instagram</a></li>
+            <li><a href="#">behance</a></li>
+          </ul>
+          <div>
+            <p>
+              ®gorilastudio
+            </p>
+            <p>
+              Todos los derechos reservados
+            </p>
+          </div>
+        </menu>
+        
+      </div>
+    </nav>
+    <header>
+      <div>
+        <p>Hola, somos un studio digital,
+        especializado en branding y
+        experiencia de usuario.</p>
+      </div>
+      <div>
+        <p>juntos podemos crear una gran experiencia a tu marca</p>
+        <a href="#">¡Hablemos ahora!</a>
+      </div>
+      
+    </header>
+
+    <main>
+      <section id="info_section">
+          <p class="info_title">crecemos contigo y tus <span>usuarios.</span></p>
+          <p class="description">
+            Pensamos estratégicamente basados en una metodología eficaz entre la conexión de tu marca y la 
+            de tus usuarios para causar alto impacto
+          </p>
+          <div class="content">
+            <div>
+              <img src="./src/img/heart.png" height="35px" width="40px">
+              <p>identidad visual</p>
+            </div>
+            <div>
+              <img src="./src/img/user-experience.png" height="35px" width="40px">
+              <p>UX/UI</p>
+            </div>
+            <div>
+              <img src="./src/img/web-design.png" height="35px" width="40px">
+              <p>Web design</p>
+            </div>
+            <div>
+              <img src="./src/img/ecommerce.png" height="35px" width="40px">
+              <p>Ecommerce</p>
+            </div>
+          </div>
+      </section>
+      <section id="form_section">
+        <div class="form-description">
+          <p>Estamos para <span>ayudarte</span>.</p>
+          <p>Cuéntanos más de</p>
+          <p><span>tu proyecto</span></p> 
+          <p>
+            Trabajemos juntos para crear experiencias para que tu marca sea fácil, rápida y sencilla de recordar.
+          </p>
+          <p>
+            ¿Y si nos reunimos?
+          </p>
+        </div>
+        <div class="contact">
+          <div>
+            <img src="./src/img/phone-call.png" height="25px" width="30px">
+            <span>Teléfono. <strong>+511 980 797 352</strong></span>
+          </div>
+          <div>
+            <img src="./src/img/email.png" height="25px" width="30px">
+            <span>Email. <strong>hola@gorilastudio.pe</strong></span>
+          </div>
+        </div>
+        <div class="form-container">
+          <form>
+            <div>
+              <input id="rubro_input" type="text" required placeholder="¿De qué rubro es tu idea?">
+            </div>
+            <div>
+              <input id="nombre_input" type="text" required placeholder="¿Cuál es tu nombre?">
+            </div>
+            <div>
+              <input id="email_input" type="email" required placeholder="Escribe tu email">
+            </div>
+            <div>
+              <textarea id="descripcion_input" type="text" required placeholder="Envíanos unas líneas aquí"></textarea>
+            </div>
+            <div>
+              <input type="checkbox" required id="terms_input" ><span>Aceptar términos y condiciones</span>
+            </div>
+            <div>
+              <button type="submit" id="submit_button">Envíanos un mensaje</button>
+            </div>
+          </form>
+        </div>
+        
+      </section>
+    </main>
+    <footer>
+      <p class="logo">gorila<span>studio</span></p>
+      <p class="copyright">Gorila 2020. All rights reserved.</p>
+
+      <p class="follow">
+        Síguenos en 
+        <a href="#">
+          <span><i class="fa fa-facebook"></i></span>
+        </a>
+        <a href="#">
+          <span><i class="fa fa-instagram"></i></span>
+        </a>
+        <a href="#">
+          <span><i class="fa fa-behance"></i></span>
+        </a>
+      </p>
+    </footer>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

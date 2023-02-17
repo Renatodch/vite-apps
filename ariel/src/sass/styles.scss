@@ -1,0 +1,490 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$white_color: #ffffff;
+$gray_color: #bfb3b3;
+$green_color: #2abb45;
+$bg_color: #232d3a;
+$bg_color_black: #000;
+$bg_color_0: #fafbf5;
+
+$font-size-1: 1.6rem;
+$font-size-2: 2rem;
+$font-size-3: 5rem;
+
+$breakpoint-md: 600px;
+$breakpoint-lg: 900px;
+
+@mixin respond-to-sm {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+@mixin respond-to-md {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+@mixin respond-to-1000 {
+  @media (max-width: 1000px) {
+    @content;
+  }
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 62.5%;
+}
+
+.menu_opened{
+  display:flex;
+}
+.menu_closed{
+  display:none;
+}
+.hidden{
+  display:none;
+}
+body{
+  font-family: 'Montserrat', sans-serif  ;
+  font-size: 2rem;
+  //height: 100vh;
+  nav.sticky{
+    position: fixed;
+  }
+  nav{
+    position: relative;
+    width: 100%;
+    #nabvar{
+      padding: 20px 100px 0 100px;
+      background-color: $bg_color_black;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      @include respond-to-md(){
+        padding: 20px 10px 0 10px;
+        flex-wrap: wrap ;
+      }
+      >p{
+        padding-top: 10px ;
+        padding-bottom: 10px ;
+        @include respond-to-md(){
+          padding-top: 30px;
+          text-align: center;
+          order: 3;
+          width: 100% ;
+        }
+        text-align: left;
+        width: 50%;
+        color: $white_color;
+        font-style:italic;
+      }
+    
+      button{
+        position: relative;
+        margin-right: 30px;
+        background-color: $bg_color_black;
+        color: $green_color;
+        font-size: 2rem;
+        width: 70px;
+        height: 30px;
+        &:hover{
+          cursor: pointer;
+        }
+        span{
+          position: absolute;
+          display: block;
+          height: 2px;
+          width: 40px;
+          border:solid 0.2rem;
+          background-color: $green_color;
+        }
+        #line-1 {
+          top: 5px;
+          left: 20px;
+        }
+        
+        #line-2 {
+          top: 15px;
+          left: 40px;
+          margin-right: 20px;
+        }
+      }
+    }
+
+    #menu_container{
+      position: relative;
+      menu{
+        display: flex;
+        flex-direction: column;
+        color: $white_color;
+        position: relative;
+        background-color: $bg_color;
+        width: 100%;
+        height: 120vh;
+        z-index: 1;
+        overflow-y: hidden;
+        .close{
+          text-align: right;
+          margin-right: 20px;
+          button{
+            border: none;
+            background-color: inherit;
+            color: $green_color;
+            font-size: 5rem;
+            &:hover{
+              cursor: pointer;
+            }
+          }
+        }
+        div{
+          padding-left: 50px;
+          padding-bottom: 30px;
+        }
+        ul{
+          padding-left: 50px;
+          padding-bottom: 60px;
+          &.first{
+            line-height: 7rem;
+            li{
+              list-style: none;
+              a{
+                font-weight: 600;
+                font-size: 4rem; 
+                text-decoration: none;
+                color: $white_color;
+                
+                &.active{
+                  color: $green_color;
+                }
+              }
+            }
+       
+          }
+          &.second{
+            a{
+              text-decoration: none;
+              color: $white_color;
+              font-size: 2rem; 
+            }
+            li{
+              list-style: none;
+            }
+            line-height: 3rem;
+          }
+        }
+      }
+    }
+  }
+
+
+ 
+  header{
+    padding: 50px 20px 50px 250px;
+    @include respond-to-md(){
+      padding-left: 0px;
+    }
+    height:100vh;
+    background-color: $bg_color_black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: hidden;
+    >div{
+      width: 100%;
+      padding-left: 60px;
+      @include respond-to-md(){
+        padding-left: 40px;
+
+      }
+      &:first-child{
+        p{
+          padding-top: 120px;
+          width: 70%;
+          color: $white_color;
+          font-weight: bold;
+          font-size: $font-size-3;
+          @include respond-to-md(){
+            width:100%;
+          }
+        }
+      }
+      &:nth-child(2){
+        width: 100%;
+        padding-top: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        font-size: $font-size-1;
+        @include respond-to-md(){
+          flex-direction: column;
+        }
+        >p{
+          line-height: 2.5rem;
+          color: $gray_color;
+          @include respond-to-md(){
+            width: 80%;
+          }
+        }
+        a{
+          line-height: 2.5rem;
+          color: $green_color;
+          font-weight: bold;
+          margin-left: 5px;
+          @include respond-to-md(){
+            margin-left: 0;
+          }
+        }
+        
+      }
+
+    }
+  }
+  #info_section{
+    padding: 50px 100px;
+    background-color: $bg_color;
+    color: $white_color;
+    height:100vh;
+    overflow-y: hidden;
+    @include respond-to-md(){
+      height:115vh;
+    }
+    @include respond-to-sm(){
+      height:125vh;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    .info_title{
+      width: 45%;
+      font-size: 5rem;
+      font-weight: bold;
+      span{
+        color:$green_color;
+      }
+      margin-bottom: 15px;
+    }
+    .description{
+      width: 50%;
+      line-height: 2.5rem;
+      font-size: $font-size-2;
+    }
+    .content{
+      margin-top: 50px;
+      display: grid;
+      grid-template-columns: repeat(6,1fr);
+      grid-template-rows: 1fr 1fr;
+      div{
+        text-align: center;
+        margin-bottom: 30px;
+        &:nth-child(1){
+          grid-column: 1;
+          grid-row: 1;
+        }
+        &:nth-child(2){
+          grid-column: 2;
+          grid-row: 1;
+        }
+        &:nth-child(3){
+          grid-column: 1;
+          grid-row: 2;
+        }
+        &:nth-child(4){
+          grid-column: 2;
+          grid-row: 2;
+        }
+      }      
+    }
+  }
+  
+  #form_section{
+    padding: 50px 100px 0px 100px;
+    background-color: $bg_color_0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+    overflow-y: hidden;
+    
+    @include respond-to-md{
+      padding: 50px 50px 50px 50px;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      height: 160vh;
+    }
+    @include respond-to-sm(){
+      height: 170vh;
+    }
+  
+    .form-description{
+      padding-top: 20px;
+      padding-right: 20px;
+      width: 60%;
+      @include respond-to-md{
+        width: 100%;
+        order: 1;
+      }
+      p:not(:nth-child(4)):not(:nth-child(5)){
+        font-size: 5rem;
+        font-weight: 800;
+        span{
+          color: $green_color;
+        }
+      }
+      p:nth-child(4),p:nth-child(5){
+        line-height: 2.5rem;
+        font-size: $font-size-1;
+ 
+      }
+      p:nth-child(4){
+        margin-top: 20px;
+      }
+    }
+    .contact{
+      padding-right: 90px;
+      display: flex;
+      font-size: $font-size-1;
+      flex-direction: row;
+      justify-content: start;
+      width:60%;
+      @include respond-to-md{
+        width: 100%;
+        order: 3;
+        flex-direction: column;
+        align-items: start;
+        justify-content: baseline;
+      }
+      >div{
+        &:last-child{
+          padding-left: 10px;
+          @include respond-to-md{
+            padding-left: 0px; 
+          }
+        }
+        padding-top: 30px;
+        margin: 0 5px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        span{
+          padding-left: 10px;
+          
+        }
+      }
+    }
+    .form-container{
+      width: 40%;
+      @include respond-to-md{
+        width: 100%;
+        order:2
+      }
+      form{
+        div{
+          width: 100%;
+          margin: 20px 0;
+  
+          input:not([type="checkbox"]){
+            font-family: 'Montserrat', sans-serif  ;
+            font-size: $font-size-1;
+            width: 100%;
+            border: none;
+            padding: 20px 30px;
+            min-width: 10%;
+          }
+  
+          textarea{
+            font-family: 'Montserrat', sans-serif;
+            padding: 20px 30px;
+            border: none;
+            font-size: $font-size-1;
+            resize: none;
+            height: 20vh;
+            width: 100%;
+          }
+          input[type="checkbox"]{
+            margin-right: 5px;
+          }
+          span{
+            font-size: $font-size-1;
+          }
+          button[type="submit"]{
+            border-radius: 5px;
+            border: none;
+            padding: 15px 15px;
+            text-align: left;
+            font-weight: 500;
+            font-size: 1.7rem;
+            width: 200px;
+            color:$white_color;
+            background-color:$green_color;
+            &:hover{
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  
+  footer{
+    font-family: 'Montserrat', sans-serif  ;
+    color: $white_color;
+    background-color: $bg-color;
+    text-align: center;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    @include respond-to-md{
+      flex-direction: column;
+    }
+  
+  
+    .follow{
+      padding: 40px 0;
+      span{
+        margin: 0 15px;
+        i{
+          font-size: 3rem;
+          color: $green_color;
+        }
+      }
+      @include respond-to-md{
+        order:1;
+      }
+    }
+    .copyright{
+      font-weight: 500;
+      padding: 40px 0;
+      color: $green_color;
+      font-size: 1.5rem;
+      @include respond-to-md{
+        order:3;
+      }
+    }
+    .logo{
+      font-size: 3rem;
+      padding: 40px 0;
+      font-weight: 700;
+      span{
+        color: $green_color;
+      }
+      @include respond-to-md{
+        order:2;
+      }
+    }
+  }
+}
+
+
+
+
+
+
