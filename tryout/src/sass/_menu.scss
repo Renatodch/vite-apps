@@ -1,0 +1,124 @@
+
+.menu{
+    background-color: $black_color;
+    font-size: 2rem;   
+    height: 100vh;
+    left: $left_switch_pos;
+    position: fixed;
+    top:0;
+    transition:left 0.3s ease-out;
+    width:290px;
+    color: $gray-color-1;
+    
+    &_toggle-on{
+        left:0px;
+    }
+    
+    &__title{
+        margin: 20px 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        
+        h3{
+            padding-top: 6px;
+            padding-right: 70px;
+        }
+       
+    }
+
+    &__nav{
+        padding-top: 30px;
+        position: absolute;
+        
+        &-list{
+            left: 235px;
+            position: relative;
+            list-style: none;
+            transition:right 0.1s ease-out;
+
+            &_toggle-on{
+                left:35px
+            }
+        }
+        &-icon{
+            list-style: none;
+            margin-right: 5px;
+        }
+        &-item{
+            margin: 20px 0;
+        }
+        &-link{
+            color: $gray-color-1;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        @each $key,$value in $nav_strings {
+            //@debug "Generating CSS for item #{$key} #{$value}";
+            .menu__nav-item:nth-child(#{$key}) {
+                .menu__nav-link:after{
+                    content: "";
+                    font-weight: bold;
+                }
+                &.toggle-on {
+                    .menu__nav-link:after{
+                        content: "#{$value}";
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+        
+
+        &-title {
+            top: 50%;
+            font-weight: bold;
+            left: 220px;
+            position: relative;
+            color: $gray-color-2;
+
+            &:before {
+                content: "";
+                display: block;
+                height: 2px;
+                position: absolute;
+                top: 50%;
+                background-color: $gray-color-2;
+                width: 40px;
+                left: 5px;
+            }
+     
+            &_toggle-on{
+                left:0px;
+                padding: 0 35px;
+    
+                &:before,&:after {
+                  content: "";
+                  display: block;
+                  height: 2px;
+                  position: absolute;
+                  top: 50%;
+                  background-color: $gray-color-2;
+                }
+                &:before {
+                    width: 20px;
+                    left: 5px;
+                }
+                
+                &:after {
+                    width:130px;
+                    left: 145px;
+                }
+            }
+
+        }
+        
+    }
+    
+}
+
+
+
+

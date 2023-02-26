@@ -1,5 +1,6 @@
 @import 'variables';
-@import "sidebar-menu";
+@import 'menu';
+@import 'switch';
 
 html{
     font-size: 62.5%;
@@ -9,18 +10,13 @@ html{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
 }
 
-.btn-main{
-    border: none;
-    border-radius: 5px;
-    width: 30px;
-    height: 30px;
-    color: #fff;
-    background-color: $purple_color;
-    font-size: 2rem;
+.debug{
+    border: 2px solid red
 }
+
 
 
 
