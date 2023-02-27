@@ -1,0 +1,59 @@
+.form{
+    &__title{
+
+    }
+
+    color:$gray-color-2;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: white;
+    top:30px;
+    position: relative;
+    width: 95%;
+
+    &__fieldset{
+        border: none;
+    }
+
+    &__field{
+        margin: 10px 0px;
+        position:relative;
+        &-label{
+            padding-left: 12px;
+        }
+        &-input{
+            margin-top: 15px;
+            border-radius: 7px;
+            width: 100%;
+            padding:10px 10px;
+            font-size: $font-size-1;
+            border: 1px solid $gray-color-0;
+            display: block;
+            color:$gray-color-2;
+        }
+        &-button{
+            background-color: white;
+            color:$gray-color-2;
+            cursor: pointer;
+            border: none;
+            left:97%;
+            top:25%;
+            font-size: $font-size-1;
+            position:absolute;
+
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+    &__button-input{
+        cursor: pointer;
+        color: white;
+        padding: 10px 17px;
+        font-size: $font-size-0;
+        border-radius: 5px;
+        border: none;
+        background-color: $purple-color; 
+        font-weight: bold;
+    }
+}

@@ -10,7 +10,7 @@
         height: 0;
         &:checked{
             + .switch__slider {
-                background-color: $purple_color;
+                background-color: $purple-color;
                 &:before {
                     transform: translateX(26px);
                 }     

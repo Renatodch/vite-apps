@@ -10,9 +10,51 @@
     <!--
       <div id="app"></div>
     -->
-    
-    <main>
+    <header class="header">
+      <div class="header__search">
+        <button class="header__icon"><i class="fa fa-search"></i></button>
+        <input class="header__search-input" placeholder="Search (Ctrl+/)" type="text" name="search" id="search_input">
+      </div>
+      <div class="header__option-set">
+        <button class="header__icon">
+          <span><i class="fa fa-moon"></i></span>
+        </button>
+        <button class="header__icon">
+          <span><i class="fa-regular fa-bell"></i></span>
+        </button>
+        <img class="header__icon-profile" src="./src/img/profile.png" alt="" width="40px" height="40px">
+      </div>
+    </header>
 
+    <main>
+      <form action="" class="form">
+        <h2 class="form__title">Basic</h2>
+        <fieldset class="form__fieldset">
+          <div class="form__field">
+            <input class="form__field-input" type="text" name="_name-input" id="name-input" placeholder="Name">
+            <label class="form__field-label" for="name-input"></label>
+          </div>
+          <div class="form__field">
+            <input class="form__field-input" type="text" name="_email-input" id="email-input" placeholder="Email">
+            <label class="form__field-label" for="email-input">You can use letters, numbers & periods</label>
+          </div>
+          <div class="form__field">
+            <button class="form__field-button"><i class="fa fa-eye-slash"></i></button>
+            <input class="form__field-input" type="password" name="_password-input" id="password-input" placeholder="Password">
+            <label class="form__field-label" for="password-input">Use 8 or more characters with a mix of letters, numbers & symbols</label>
+          </div>
+          <div class="form__field">
+            <input class="form__field-input" type="text" name="_birth-input" id="birth-input" placeholder="Birth Date">
+            <label class="form__field-label" for="birth-input"></label>
+          </div>
+          <div class="form__field">
+            <button class="form__field-button"><i class="fa fa-eye-slash"></i></button>
+            <input class="form__field-input" type="password" name="_confirm-password-input" id="confirm-password-input" placeholder="Confirm Password">
+            <label class="form__field-label" for="confirm-password-input">Make sure to type the same password as above</label>
+          </div>
+          <input class="form__button-input" type="button" name="_button-input" id="button-input" value="GET STARTED!">
+        </fieldset>
+      </form>
     </main>
     
     <aside class="menu">

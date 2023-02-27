@@ -1,6 +1,25 @@
 @import 'variables';
 @import 'menu';
+@import 'header';
 @import 'switch';
+@import 'form';
+
+@mixin respond-to-sm {
+    @media (max-width: 600px) {
+      @content;
+    }
+}
+@mixin respond-to-md {
+    @media (max-width: 900px) {
+        @content;
+    }
+}
+@mixin respond-to-1000 {
+    @media (max-width: 1000px) {
+        @content;
+    }
+}
+  
 
 html{
     font-size: 62.5%;
@@ -17,6 +36,10 @@ html{
     border: 2px solid red
 }
 
+body{
+    padding-left: 150px;
+    background-color: $cream-color;
+}
 
 
 
