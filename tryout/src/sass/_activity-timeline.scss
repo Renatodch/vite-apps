@@ -12,6 +12,94 @@
         align-items: center;
     }
     &__item{
-
+        padding: 0 20px;
+        font-size: $font-size-0;
+        width:100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        &-body{
+/*             display: flex;
+            flex-direction: column;
+            justify-content: space-between; */
+        }
+        &-title{
+            font-weight: bold;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            .circle{
+                margin-right:10px;
+                //padding: 0px 6px;
+                display: inline-block;
+                width:15px;
+                height:15px;
+                border-radius: 50%;
+                &_orange{
+                    border: solid 2px rgba(231, 199, 40, 0.997);
+                    background-color: orange;
+                    &-low{
+                        background-color: #f0c388;
+                    }
+                }
+                &_red{
+                    border: solid 2px rgba(237, 172, 172, 0.858);
+                    background-color: red;
+                    &-low{
+                        background-color: #f08888;
+                    }
+                }
+                &_purple{
+                    border: solid 2px rgba(207, 140, 232, 0.997);
+                    background-color: purple;
+                    &-low{
+                        background-color: #ed8cef;
+                    }
+                }
+                &_blue{
+                    border: solid 2px rgba(158, 143, 226, 0.997);
+                    background-color: blue;
+                    &-low{
+                        background-color: #8e91ef;
+                    }
+                }
+                &_font{
+                    padding: 7px 0.0001px 7px 7px;
+                    border-radius: 100%;
+                    text-align: center;
+                }
+            }
+        }
+        &-content{
+            font-size: $font-size-m1;
+            border-left: solid 2px $gray-color-1;
+            padding-left: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-left: 7px;
+            color: $gray-color-2;
+            p{
+                margin-bottom: 5px;
+                &:first-child{
+                    font-weight: bold;
+                }
+                &:last-child{
+                   i{
+                       font-size: $font-size-0
+                   } 
+                }
+            }
+            .icon{
+                &_red{
+                    color:#ff0000;
+                }
+                &_blue{
+                    color:#0000ff;
+                }
+            }
+        }
+        &-date{
+            font-size: $font-size-m1;
+            color:$gray-color-2
+        }
     }
 }

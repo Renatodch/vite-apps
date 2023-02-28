@@ -6,7 +6,7 @@
     height: 100vh;
     left: $left_switch_pos;
     @include respond-to-sm(){
-        left:-100%;
+        left:-300px;
     }
     position: fixed;
     top:0;
