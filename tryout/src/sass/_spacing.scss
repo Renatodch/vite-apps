@@ -1,0 +1,18 @@
+.spacing{
+    background-color: white;
+    width:$block_width;
+    margin-top: 20px;
+    position:relative;
+    left:$left_offset;
+    transition: left 0.2s ease-in;
+
+    @include respond-to-sm(){
+        left:$left_offset_responsive;
+        width:$block_width_responsive;
+
+    }
+    &__container{
+        display: flex;
+        justify-content: center;
+    }
+}

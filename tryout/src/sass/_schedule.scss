@@ -1,0 +1,48 @@
+.schedule{
+    background-image: url(./src/img/table-font.jpg);
+    background-repeat: no-repeat;
+    width:50%;
+    padding-top: 100px;
+    @include respond-to-sm(){
+        margin-top: 20px;
+        width: 100%;
+    }
+    &__body{
+        width:100%;
+        background-color: white;
+    }
+    &__header{
+        display: flex;
+        justify-content: start;
+    }
+    &__icon{
+        width: 40px;
+        height: 40px;
+        color: purple;
+        background-color: #e1acf6;
+        border-radius: 7px;
+        text-align: center;
+        padding-top: 7px;
+        &-month{
+            font-size: $font-size-m1;
+        }
+        &-day{
+            font-size: $font-size-1;
+            font-weight: bold;
+        }
+    }
+    &__options{
+
+    }
+    &__details{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        &-date{
+            
+        }
+        &-place{
+
+        }
+    }
+}

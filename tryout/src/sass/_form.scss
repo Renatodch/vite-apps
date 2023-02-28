@@ -1,32 +1,33 @@
 .form{
-    &__title{
-
-    }
-
     color:$gray-color-2;
-    border-radius: 10px;
     padding: 15px;
     background-color: white;
-    top:30px;
     position: relative;
-    width: 95%;
+    transition: left 0.2s ease-in;
+    left: $left_offset;
+    width: $block_width;
 
+    @include respond-to-sm(){
+        left:$left_offset_responsive;
+        width:$block_width_responsive;
+
+    }
     &__fieldset{
         border: none;
     }
 
     &__field{
-        margin: 10px 0px;
         position:relative;
         &-label{
             padding-left: 12px;
         }
         &-input{
             margin-top: 15px;
+            margin-bottom: 3px;
             border-radius: 7px;
             width: 100%;
             padding:10px 10px;
-            font-size: $font-size-1;
+            font-size: $font-size-0;
             border: 1px solid $gray-color-0;
             display: block;
             color:$gray-color-2;
@@ -36,8 +37,12 @@
             color:$gray-color-2;
             cursor: pointer;
             border: none;
-            left:97%;
-            top:25%;
+            left:96%;
+            top:24%;
+            @include respond-to-sm(){
+                left:92%;
+            }
+            //top:50%;
             font-size: $font-size-1;
             position:absolute;
 
@@ -46,14 +51,26 @@
             }
         }
     }
-    &__button-input{
-        cursor: pointer;
-        color: white;
-        padding: 10px 17px;
-        font-size: $font-size-0;
-        border-radius: 5px;
-        border: none;
-        background-color: $purple-color; 
-        font-weight: bold;
+    &__button{
+        margin-top:20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-input{
+            cursor: pointer;
+            color: white;
+            padding: 10px 17px;
+            font-size: $font-size-0;
+            border-radius: 5px;
+            border: none;
+            background-color: $purple-color; 
+            font-weight: bold;
+        }
+        &-login{
+            font-size: $font-size-0;
+            a{
+                text-decoration: none;
+            }
+        }
     }
 }

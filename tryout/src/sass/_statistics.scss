@@ -1,0 +1,93 @@
+.statistics{
+    width: 16%;
+    display: flex;
+    flex-direction: column;
+    //flex-wrap: wrap;
+    align-items: flex-start;
+    background-color: $cream-color;
+    
+    @include respond-to-sm(){
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 20px;
+    }
+    &__item{
+        
+        background-color: white;
+        width:100%;
+        max-height: 200px;
+        padding:10px;
+        @include respond-to-sm(){
+            width: 40%;
+        }
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &-chart-data{
+            font-size: $font-size-1;
+            align-self: flex-start;
+        }
+        &-chart-img{
+            height: auto;
+            margin-top: 10px;
+            img{
+                max-width: 100%;
+            }
+        }
+        &-chart-title{
+            padding: 15px 0 5px 0;
+            font-size: $font-size-m1;   
+            font-weight: bold;
+        }
+
+        &-project{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            //width: 100%;
+            padding: 20px;
+            font-size: $font-size-m1;    
+            &-data{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                p:nth-child(1){
+                    span{
+                        border-radius: 50%;
+                        background-color: $purple-color;
+                        font-size: $font-size-m1;
+                        color: white;
+                        padding: 0.6rem 0.6rem;
+
+                    }
+                }
+                p:nth-child(2){
+                    margin-top: 15px;
+                    font-weight: bold;
+                }
+                p:nth-child(3){
+                    margin-top: 5px;
+                    font-weight: bold;
+                    sup{
+                        margin-left: 5px;
+                        color:#ff0000;
+                    }
+                }
+                p:nth-child(4){
+                    margin-top: 15px;
+                    font-weight: bold;
+                    color: $gray-color-2
+                }
+            }
+            &-option{
+                font-size: $font-size-1;    
+                
+            }
+        }
+    }
+}

@@ -2,18 +2,31 @@ $black-color-0:#000;
 $black-color:#211e47;
 $purple-color:#b65bf3;
 $left_switch_pos:-200px;
+$gray-color-m2:#fbf7f7;
+$gray-color-m1:#ece9e9;
 $gray-color-0:#e0dede;
 $gray-color-1:#ccc;
 $gray-color-2:#5a5555;
 $cream-color:#f0edf1;
 
-$font-size-0:1.5rem;
-$font-size-1:1.7rem;
-$font-size-2:2rem;
+$block_width: 80%;
+$left_offset: 150px;
+$left_offset_responsive: 15px;
+$block_width_responsive: 95%;
+$font-size-m1: 1.2rem;//1rem
+$font-size-0: 1.4rem; 
+$font-size-1: 1.7rem;
+$font-size-2: 2rem;
 
 $nav_strings: (
     1:"Email",
     2:"Chat",
     3:"Auth",
     4:"Form Element",
-)
+);
+
+@mixin respond-to-sm {
+    @media (max-width: 769px) {
+      @content;
+    }
+}

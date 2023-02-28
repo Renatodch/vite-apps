@@ -7,11 +7,9 @@
     <title>Vite App</title>
   </head>
   <body>
-    <!--
-      <div id="app"></div>
-    -->
     <header class="header">
       <div class="header__search">
+        <button class="header__icon-bars"><i class="fa"></i></button>
         <button class="header__icon"><i class="fa fa-search"></i></button>
         <input class="header__search-input" placeholder="Search (Ctrl+/)" type="text" name="search" id="search_input">
       </div>
@@ -27,7 +25,7 @@
     </header>
 
     <main>
-      <form action="" class="form">
+      <form action="" class="form block_box-shadow">
         <h2 class="form__title">Basic</h2>
         <fieldset class="form__fieldset">
           <div class="form__field">
@@ -44,7 +42,8 @@
             <label class="form__field-label" for="password-input">Use 8 or more characters with a mix of letters, numbers & symbols</label>
           </div>
           <div class="form__field">
-            <input class="form__field-input" type="text" name="_birth-input" id="birth-input" placeholder="Birth Date">
+            <input class="form__field-input" type="text" name="_birth-input" id="birth-input" placeholder="Birth Date"
+            onfocus="(this.type = 'date')" onblur="(this.type = 'text')">
             <label class="form__field-label" for="birth-input"></label>
           </div>
           <div class="form__field">
@@ -52,11 +51,176 @@
             <input class="form__field-input" type="password" name="_confirm-password-input" id="confirm-password-input" placeholder="Confirm Password">
             <label class="form__field-label" for="confirm-password-input">Make sure to type the same password as above</label>
           </div>
-          <input class="form__button-input" type="button" name="_button-input" id="button-input" value="GET STARTED!">
+          <div class="form__button">
+            <input class="form__button-input" type="button" name="_button-input" id="button-input" value="GET STARTED!">
+            <span class="form__button-login">Already have an account? <a href="#">Log in</a></span>
+          </div>
         </fieldset>
       </form>
+
+      <div class="container__level-0">
+        <div class="custom-table block_box-shadow">
+          <div class="block__title">Customized Table</div>
+          <table class="table block_box-shadow">
+            <tr class="table__row table__row_head">
+              <th class="table__col table__col_head table__col_align-left">dessert (100g serving)</th>
+              <th class="table__col table__col_head">calories</th>
+              <th class="table__col table__col_head">fat (g)</th>
+              <th class="table__col table__col_head">carbs (g)</th>
+              <th class="table__col table__col_head">protein (g)</th>
+            </tr>
+            <tr class="table__row table__row_gray">
+              <td class="table__col table__col_align-left">Frozen yoghurt</td>
+              <td class="table__col">159</td>
+              <td class="table__col">6</td>
+              <td class="table__col">24</td>
+              <td class="table__col">4</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__col table__col_align-left">Ice cream sandwich</td>
+              <td class="table__col">237</td>
+              <td class="table__col">9</td>
+              <td class="table__col">37</td>
+              <td class="table__col">4.3</td>
+            </tr>
+            <tr class="table__row table__row_gray">
+              <td class="table__col table__col_align-left">Eclair</td>
+              <td class="table__col">262</td>
+              <td class="table__col">16</td>
+              <td class="table__col">24</td>
+              <td class="table__col">6</td>
+            </tr>
+            <tr class="table__row">
+              <td class="table__col table__col_align-left">Cupcake</td>
+              <td class="table__col">305</td>
+              <td class="table__col">3.7</td>
+              <td class="table__col">67</td>
+              <td class="table__col">4.3</td>
+            </tr>
+            <tr class="table__row table__row_gray">
+              <td class="table__col table__col_align-left">Gingerbread</td>
+              <td class="table__col">356</td>
+              <td class="table__col">16</td>
+              <td class="table__col">49</td>
+              <td class="table__col">3.9</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="activity-timeline block_box-shadow">
+          <div class="block__title">Activity Timeline</div>
+          <div class="activity-timeline__list">
+            <div class="activity-timeline__item">
+            </div>
+            <div class="activity-timeline__item">
+            </div>
+            <div class="activity-timeline__item">
+            </div>
+            <div class="activity-timeline__item">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container__level-0">
+        <div class="accordion block_box-shadow">
+          <div class="block__title">Simple Accordion</div>
+          <p class="paragraph">
+            Use <span class="paragraph__purple">`Accordion`</span>, <span class="paragraph__purple">`AccordionSummary`</span>
+            and <span class="paragraph__purple">`Accordion Details`</span> components to make a simple accordion.
+          </p>
+          <div class="accordion__content">
+            <div class="accordion__item">
+              <div class="accordion__item-title">Accordion 1<span><i class="fas fa-chevron-right fa-rotate-90"></i></span>
+              </div>
+              <div class="accordion__item-content">
+                <p>
+                  Wafer sesame snaps chocolate bar candy canes halvah. Cupcake sesame snaps sweet
+                  tart dessert biscuit. Topping souffié tart sweet croissant.
+                </p>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <div class="accordion__item-title">Accordion 2<span><i class="fas fa-chevron-right fa-rotate-90"></i></span></div>
+              <div class="accordion__item-content">
+                <p>
+                  Wafer sesame snaps chocolate bar candy canes halvah. Cupcake sesame snaps sweet
+                  tart dessert biscuit. Topping souffié tart sweet croissant.
+                </p>
+              </div>
+            </div>
+            <div class="accordion__item">
+              <div class="accordion__item-title">Accordion 3<span><i class="fas fa-chevron-right fa-rotate-90"></i></span></div>
+              <div class="accordion__item-content">
+                <p>
+                  Wafer sesame snaps chocolate bar candy canes halvah. Cupcake sesame snaps sweet
+                  tart dessert biscuit. Topping souffié tart sweet croissant.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="statistics">
+          <div class="statistics__item block_box-shadow">
+            <p class="statistics__item-chart-data">42.5k</p>
+            <div class="statistics__item-chart-img">
+              <img src="./src/img/chart.png" width="100px" height="70px" alt="" srcset="">
+            </div>
+            <p class="statistics__item-chart-title">Total Growth</p>
+          </div>
+          <div class="statistics__item statistics__item-project block_box-shadow">
+            <div class="statistics__item-project-data">
+              <p><span><i class="fa-sharp fa-solid fa-briefcase"></i></span></p>
+              <p>New Project</p>
+              <p>862<sup>-18%</sup></p>
+              <p>Yearly Project</p>
+            </div>
+            <div class="statistics__item-project-option">
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+          </div>
+
+        </div>
+        <div class="schedule block_box-shadow">
+          <div class="schedule__body">
+
+            <div class="schedule__header">
+              <div class="schedule__icon">
+                <p class="schedule__icon-month">Jan</p>
+                <p class="schedule__icon-day">24</p>
+              </div>
+              <div class="schedule__title">
+                <p class="schedule__title-main">Developer Meetup</p>
+                <p class="schedule__title-description">The WordPress open source, free software project is the community behind the...</p>
+              </div>
+            </div>
+            <div class="schedule__options">
+              
+            </div>
+            <div class="schedule__details">
+              <div class="schedule__details-date"></div>
+              <div class="schedule__details-place"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="spacing block_box-shadow">
+        <div class="block__title">Spacing</div>
+        <div class="spacing__container">
+          <div class="spacing__item">
+            adasd
+          </div>
+          <div class="spacing__item">
+            fasfasf
+          </div>
+        </div>
+      </div>
+
     </main>
     
+    <div class="backdrop"></div>
     <aside class="menu">
       <div class="menu__title">
         <h3>TEST</h3>
@@ -66,13 +230,13 @@
         </label>
       </div>
       <nav class="menu__nav">
-          <h6 class="menu__nav-title"></h6>
-          <ul class="menu__nav-list">
-            <li class="menu__nav-item"><a class="menu__nav-link" href="#"><i class="fa-regular fa-envelope menu__nav-icon"></i></a></li>
-            <li class="menu__nav-item"><a class="menu__nav-link" href="#"><i class="fa-regular fa-message menu__nav-icon"></i></a></li>
-            <li class="menu__nav-item"><a class="menu__nav-link" href="#"><i class="fa-regular fa-lock menu__nav-icon"></i></a></li>
-            <li class="menu__nav-item"><a class="menu__nav-link" href="#"><i class="fa-sharp fa-regular fa-list menu__nav-icon"></i></a></li>
-          </ul>
+        <h6 class="menu__nav-title"></h6>
+        <ul class="menu__nav-list">
+          <li class="menu__nav-item"><a class="menu__nav-link" href="#"><i class="fa-regular fa-envelope menu__nav-icon"></i></a></li>
+          <li class="menu__nav-item"><a class="menu__nav-link" href="#"><i class="fa-regular fa-message menu__nav-icon"></i></a></li>
+          <li class="menu__nav-item"><a class="menu__nav-link" href="#"><i class="fa-regular fa-lock menu__nav-icon"></i></a></li>
+          <li class="menu__nav-item"><a class="menu__nav-link" href="#"><i class="fa-sharp fa-regular fa-list menu__nav-icon"></i></a></li>
+        </ul>
       </nav>
 
     </aside>

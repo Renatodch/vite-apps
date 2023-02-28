@@ -4,9 +4,23 @@
     justify-content: space-between;
     align-items: center;
     font-size: $font-size-2;
-    width: 95%;
-    top:10px;
+    width: $block_width;
+    left: $left_offset;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    background-color: $cream-color;
 
+    @include respond-to-sm(){
+        left:$left_offset_responsive;
+        width:$block_width_responsive;
+
+    }
+
+    &_sticky{
+        //width: 1000px;
+        z-index: 1;
+        position:fixed;
+    }
     &__search{
         &-input{
             font-size: $font-size-1;

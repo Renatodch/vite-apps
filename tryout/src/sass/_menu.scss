@@ -1,9 +1,13 @@
 
 .menu{
+    z-index: 100;
     background-color: $black_color;
     font-size: 2rem;   
     height: 100vh;
     left: $left_switch_pos;
+    @include respond-to-sm(){
+        left:-100%;
+    }
     position: fixed;
     top:0;
     transition:left 0.3s ease-out;
