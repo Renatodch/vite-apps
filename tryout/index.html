@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   </head>
-  <body>
-    <header class="header">
+  <body id="body-id">
+    <header class="header" >
       <div class="header__search">
         <button class="header__icon header__icon-bars"><i class="fa"></i></button>
         <button class="header__icon"><i class="fa fa-search"></i></button>
@@ -162,6 +162,7 @@
                 </div>
               </div>
               <div class="activity-timeline__item-date">
+                September, 30
               </div>
             </div>
           </div>
@@ -226,27 +227,41 @@
               <i class="fa-solid fa-ellipsis-vertical"></i>
             </div>
           </div>
-
         </div>
-        <div class="schedule block_box-shadow">
-          <div class="schedule__body">
 
-            <div class="schedule__header">
-              <div class="schedule__icon">
-                <p class="schedule__icon-month">Jan</p>
-                <p class="schedule__icon-day">24</p>
-              </div>
-              <div class="schedule__title">
-                <p class="schedule__title-main">Developer Meetup</p>
-                <p class="schedule__title-description">The WordPress open source, free software project is the community behind the...</p>
+        <div class="schedule block_box-shadow">
+          <div class="schedule__image">
+          </div>
+          <div class="schedule__header">
+            <div class="schedule__icon">
+              <p class="schedule__icon-month">Jan</p>
+              <p class="schedule__icon-day">24</p>
+            </div>
+            <div class="schedule__title">
+              <p class="schedule__title-main">Developer Meetup</p>
+              <p class="schedule__title-description">The WordPress open source, free software project is the community behind the...</p>
+            </div>
+          </div>
+          <ul class="schedule__options">
+              <li class="schedule__options-item"><i class="fa fa-star"></i><p>Interested</p></li>
+              <li class="schedule__options-item"><i class="fa fa-circle-check"></i><p>Joined</p></li>
+              <li class="schedule__options-item"><i class="fa fa-user"></i><p>Invited</p></li>
+              <li class="schedule__options-item"><i class="fa-regular fa-ellipsis"></i><p>More</p></li>
+          </ul>
+          <div class="schedule__details">
+            <div class="schedule__details-item">
+              <div><i class="fa fa-clock"></i></div>
+              <div>
+                <p>Tuesday, 24 january, 10:20 - 12:30</p>
+                <p>After 1 Week</p>
               </div>
             </div>
-            <div class="schedule__options">
-              
-            </div>
-            <div class="schedule__details">
-              <div class="schedule__details-date"></div>
-              <div class="schedule__details-place"></div>
+            <div class="schedule__details-item">
+              <div><i class="fa fa-location-dot"></i></div>
+              <div>
+                <p>The Rochard NYC</p>
+                <p>1305 Lexington Ave, New York</p>
+              </div>
             </div>
           </div>
         </div>
@@ -255,18 +270,54 @@
       <div class="spacing block_box-shadow">
         <div class="block__title">Spacing</div>
         <div class="spacing__container">
-          <div class="spacing__item">
-            adasd
-          </div>
-          <div class="spacing__item">
-            fasfasf
-          </div>
+          <section class="splide " aria-label="Splide Basic HTML Example">
+            <div class="splide__track ">
+              <ul class="splide__list" align="center">
+                <li class="splide__slide" >
+                  <div class="spacing__image">
+                    <img src="https://picsum.photos/id/232/200/300" alt="">
+                  </div>
+                  <div class="spacing__image">
+                    <img src="https://picsum.photos/id/233/200/300" alt="">
+                  </div>
+                </li>
+                <li class="splide__slide" >
+                  <div class="spacing__image">
+                    <img src="https://picsum.photos/id/234/200/300" alt="">
+                  </div>
+                  <div class="spacing__image">
+                    <img src="https://picsum.photos/id/235/200/300" alt="">
+                  </div>
+                </li>
+                <li class="splide__slide" >
+                  <div class="spacing__image">
+                    <img src="https://picsum.photos/id/236/200/300" alt="">
+                  </div>
+                  <div class="spacing__image">
+                    <img src="https://picsum.photos/id/237/200/300" alt="">
+                  </div>
+                </li>
+                <li class="splide__slide" >
+                  <div class="spacing__image">
+                    <img src="https://picsum.photos/id/238/200/300" alt="">
+                  </div>
+                  <div class="spacing__image">
+                    <img src="https://picsum.photos/id/239/200/300" alt="">
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
         </div>
       </div>
+      <a class="arrow-up" href="#body-id">
+        <i class="fa-solid fa-arrow-up"></i>
+      </a>
 
     </main>
     
     <div class="backdrop"></div>
+
     <aside class="menu">
       <div class="menu__title">
         <h3>TEST</h3>
@@ -277,11 +328,43 @@
       </div>
       <nav class="menu__nav">
         <h6 class="menu__nav-title"></h6>
-        <ul class="menu__nav-list">
-          <li class="menu__nav-item"><a class="menu__nav-link" href="#"><i class="fa-regular fa-envelope menu__nav-icon"></i></a></li>
-          <li class="menu__nav-item"><a class="menu__nav-link" href="#"><i class="fa-regular fa-message menu__nav-icon"></i></a></li>
-          <li class="menu__nav-item"><a class="menu__nav-link" href="#"><i class="fa-regular fa-lock menu__nav-icon"></i></a></li>
-          <li class="menu__nav-item"><a class="menu__nav-link" href="#"><i class="fa-sharp fa-regular fa-list menu__nav-icon"></i></a></li>
+        <ul class="menu__nav-list menu__nav-list-main">
+          <li class="menu__nav-item menu__nav-item-main">
+            <button class="menu__nav-link" >
+              <div class="menu__nav-icon">
+                <i class="fa-regular fa-envelope"></i>
+              </div>
+            </button>
+          </li>
+          <li class="menu__nav-item menu__nav-item-main">
+            <button class="menu__nav-link" >
+              <div class="menu__nav-icon">
+                <i class="fa-regular fa-message"></i>
+              </div>
+            </button>
+          </li>
+          <li class="menu__nav-item menu__nav-item-main">
+            <button class="menu__nav-link menu__nav-link-dropdown" >
+              <div class="menu__nav-icon">
+                <i class="fa-regular fa-lock"></i>
+              </div> 
+            </button>
+          </li>
+          <li class="menu__nav-item menu__nav-item-main">
+            <button class="menu__nav-link menu__nav-link-dropdown" >
+              <div class="menu__nav-icon">
+                <i class="fa-regular fa-list"></i>
+              </div>  
+            </button>
+            <ul class="menu__nav-list menu__nav-list-l1">
+              <li class="menu__nav-item menu__nav-item-l1"><button class="menu__nav-link">Text Field</button></li>
+              <li class="menu__nav-item menu__nav-item-l1"><button class="menu__nav-link">Select</button></li>
+              <li class="menu__nav-item menu__nav-item-l1"><button class="menu__nav-link">Checkbox</button></li>
+              <li class="menu__nav-item menu__nav-item-l1"><button class="menu__nav-link">Radio</button></li>
+              <li class="menu__nav-item menu__nav-item-l1"><button class="menu__nav-link">Custom inputs</button></li>
+              <li class="menu__nav-item menu__nav-item-l1"><button class="menu__nav-link">Textarea</button></li>
+            </ul>
+          </li>
         </ul>
       </nav>
 

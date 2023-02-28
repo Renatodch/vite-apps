@@ -89,3 +89,26 @@ body{
     pointer-events: all;
     opacity: 1;
 }
+
+.arrow-up{
+    position:fixed;
+    height:40px;
+    width: 40px;
+    font-size: $font-size-2;
+    top:87%;
+    left:94%;
+    @include respond-to-sm(){
+        left:87%;
+    }
+    background-color: $purple-color;
+    border-radius: 50%;
+    text-align: center;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    &:hover{
+        cursor: pointer;
+    }
+}

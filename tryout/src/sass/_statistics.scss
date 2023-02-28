@@ -19,28 +19,32 @@
         max-height: 200px;
         padding:10px;
         @include respond-to-sm(){
-            width: 40%;
+            width: 47%;
         }
         margin-bottom: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        &-chart-data{
-            font-size: $font-size-1;
-            align-self: flex-start;
-        }
-        &-chart-img{
-            height: auto;
-            margin-top: 10px;
-            img{
-                max-width: 100%;
+
+        &-chart{
+            &-data{
+                font-size: $font-size-1;
+                align-self: flex-start;
+            }
+            &-img{
+                height: auto;
+                margin-top: 10px;
+                img{
+                    max-width: 100%;
+                }
+            }
+            &-title{
+                padding: 15px 0 5px 0;
+                font-size: $font-size-m1;   
+                font-weight: bold;
             }
         }
-        &-chart-title{
-            padding: 15px 0 5px 0;
-            font-size: $font-size-m1;   
-            font-weight: bold;
-        }
+
 
         &-project{
             display: flex;

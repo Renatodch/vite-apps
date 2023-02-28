@@ -34,15 +34,25 @@
     &__nav{
         padding-top: 30px;
         position: absolute;
-        
+        width:75%;
         &-list{
             left: 235px;
             position: relative;
             list-style: none;
             transition:right 0.1s ease-out;
-
             &_toggle-on{
                 left:35px
+            }
+            &-l1{
+                left: 2px;
+                list-style: circle;
+                max-height: 0px;
+                padding-left: 20px;
+                overflow: hidden;
+                transition: max-height 0.2s;
+                &_on{
+                    max-height:500px
+                }
             }
         }
         &-icon{
@@ -51,30 +61,31 @@
         }
         &-item{
             margin: 20px 0;
+            font-size: $font-size-0;
+
         }
         &-link{
+            border: none;
+            background-color: inherit;
             color: $gray-color-1;
-            font-size: 1.5rem;
+            font-size: $font-size-0;
             text-decoration: none;
-        }
-
-        @each $key,$value in $nav_strings {
-            //@debug "Generating CSS for item #{$key} #{$value}";
-            .menu__nav-item:nth-child(#{$key}) {
-                .menu__nav-link:after{
-                    content: "";
-                    font-weight: bold;
-                }
-                &.toggle-on {
-                    .menu__nav-link:after{
-                        content: "#{$value}";
-                        font-weight: bold;
-                    }
-                }
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            cursor: pointer;
+            &-dropdown{
+                justify-content: space-between;
+            }
+            
+            &:focus{
+                outline: none;
+            }
+            span,div,i{
+                pointer-events: none;
             }
         }
-
-        
 
         &-title {
             top: 50%;
@@ -122,7 +133,4 @@
     }
     
 }
-
-
-
 
