@@ -23,7 +23,7 @@
     
     &__image{
         padding: 0 10px;
-        width: 40%;//100%
+        width: 35%;//100%
         height: auto;
         display: block;
         @include respond-to-sm(){
@@ -31,7 +31,7 @@
         }
         img{
             width:100%; //300px;
-            height:200px;
+            height:250px;
             @include respond-to-sm(){
                 width:500px;
                 height:300px;

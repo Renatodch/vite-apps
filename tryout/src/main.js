@@ -10,8 +10,8 @@ import Splide from '@splidejs/splide';
 const menu = document.querySelector('.menu');
 const menuNavTitle = document.querySelector('.menu__nav-title');
 const backdrop = document.querySelector('.backdrop');
-const menuNavListMain = document.querySelector('.menu__nav-list-main');
-const navItems = menuNavListMain.querySelectorAll('.menu__nav-item-main');
+const menuNavListMain = document.querySelector('.menu__nav-list_main');
+const navItems = menuNavListMain.querySelectorAll('.menu__nav-item_main');
 let mySplide = null;
 
 
@@ -28,6 +28,7 @@ function toggleMenu(){
     if(menuNavTitle.classList.contains('menu__nav-title_toggle-on')){
       menuNavTitle.innerHTML= "APPS & PAGES";
       navItems.forEach((e,i)=>{
+        e.style.width="100%";
         const span = document.createElement("span");
         span.textContent = navStrings[i];
         const button = e.querySelector("button");
@@ -40,18 +41,17 @@ function toggleMenu(){
 
           switch(span.textContent){
             case "Form Element":
-              const subItems = e.querySelectorAll(".menu__nav-item-l1");
+              const subItems = e.querySelectorAll(".menu__nav-item_l1");
               subItems.forEach((e,i) =>{
-                //e.firstElementChild.textContent = formElementStrings[i]
                 button.addEventListener("click",openFormElement);
               })
           }
         }
-        
       })
     }else{
       menuNavTitle.innerHTML= "";
       navItems.forEach((e,i)=>{
+        e.style.width="15%";
         const button = e.querySelector("button");
         const div = button.querySelector(".menu__nav-icon");
         const span = div.querySelector("span")
@@ -64,8 +64,8 @@ function toggleMenu(){
         switch (span.textContent){
           case "Form Element":
             button.removeEventListener("click",openFormElement);
-            if(button.nextElementSibling.classList.contains('menu__nav-list-l1_on')){
-              button.nextElementSibling.classList.remove('menu__nav-list-l1_on')
+            if(button.nextElementSibling.classList.contains('menu__nav-list_l1-on')){
+              button.nextElementSibling.classList.remove('menu__nav-list_l1-on')
             }
         }
 
@@ -78,7 +78,7 @@ function toggleMenu(){
 
 function openFormElement(e){
 
-  e.target.nextElementSibling.classList.toggle('menu__nav-list-l1_on');
+  e.target.nextElementSibling.classList.toggle('menu__nav-list_l1-on');
 }
 
 

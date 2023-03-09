@@ -4,7 +4,7 @@
     display: inline-block;
     width: 60px;
     height: 34px;
-    input {
+    &__checkbox {
         opacity: 0;
         width: 0;
         height: 0;
@@ -27,7 +27,6 @@
         right: 0;
         bottom: 0;
         background-color: #ccc;
-        -webkit-transition: .4s;
         transition: .4s;
 
         &:before {
