@@ -1,15 +1,8 @@
 .spacing{
     background-color: white;
-    width:$block_width;
-    margin: 20px 0;
+    width:100%;
     position:relative;
-    left:$left_offset;
 
-    @include respond-to-sm(){
-        left:$left_offset_responsive;
-        width:$block_width_responsive;
-
-    }
     &__container{
         padding-bottom: 20px;
 

@@ -4,14 +4,11 @@
     background-color: white;
     position: relative;
     transition: left 0.2s ease-in;
-    left: $left_offset;
-    width: $block_width;
+    width:100%;
+    //left: $left_offset;
+    //width: $block_width;
 
-    @include respond-to-sm(){
-        left:$left_offset_responsive;
-        width:$block_width_responsive;
 
-    }
     &__fieldset{
         border: none;
     }

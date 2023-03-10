@@ -7,7 +7,6 @@
     width: $block_width;
     left: $left_offset;
     padding-top: 10px;
-    margin-bottom: 10px;
     background-color: $cream-color;
 
     @include respond-to-sm(){
